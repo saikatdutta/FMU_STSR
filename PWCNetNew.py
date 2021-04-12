@@ -256,11 +256,11 @@ class PWCNet(torch.nn.Module):
 		tensorFirst = self.moduleExtractor(tensorFirst)
 		tensorSecond = self.moduleExtractor(tensorSecond)
 
-		objectEstimate = self.moduleSix(tensorFirst[-1], tensorSecond[-1], None) #,  Backward_tensorGrid, Backward_tensorPartial)
-		objectEstimate = self.moduleFiv(tensorFirst[-2], tensorSecond[-2], objectEstimate) #, Backward_tensorGrid, Backward_tensorPartial)
-		objectEstimate = self.moduleFou(tensorFirst[-3], tensorSecond[-3], objectEstimate) #, Backward_tensorGrid, Backward_tensorPartial)
-		objectEstimate = self.moduleThr(tensorFirst[-4], tensorSecond[-4], objectEstimate) #, Backward_tensorGrid, Backward_tensorPartial)
-		objectEstimate = self.moduleTwo(tensorFirst[-5], tensorSecond[-5], objectEstimate) #, Backward_tensorGrid, Backward_tensorPartial)
+		objectEstimate = self.moduleSix(tensorFirst[-1], tensorSecond[-1], None) 
+		objectEstimate = self.moduleFiv(tensorFirst[-2], tensorSecond[-2], objectEstimate) 
+		objectEstimate = self.moduleFou(tensorFirst[-3], tensorSecond[-3], objectEstimate) 
+		objectEstimate = self.moduleThr(tensorFirst[-4], tensorSecond[-4], objectEstimate) 
+		objectEstimate = self.moduleTwo(tensorFirst[-5], tensorSecond[-5], objectEstimate) 
 
 		return objectEstimate['tensorFlow'] + self.moduleRefiner(objectEstimate['tensorFeat'])
 		
