@@ -24,8 +24,7 @@ from tqdm import tqdm
 import sys
 
 import os
-# from natsort import natsorted
-# from skimage.measure import compare_psnr
+
 import torch
 import torchvision
 import torchvision.transforms as transforms
@@ -46,12 +45,9 @@ from torch.utils.data import Dataset, DataLoader
 import pandas as pd
 from collections import OrderedDict 
 
-# from UNet2 import UNet2 as UNet
-#from unetpp2 import NestedUNetv2 as UNetpp
+
 from flow_reversal import FlowReversal
-#from rbpn import Net as RBPN
 from PWCNetNew import PWCNet
-#from liteflownet2 import liteflownet
 from arch import RSDN9_128 as RSDN
 from gridnet import GridNet
 
@@ -106,13 +102,13 @@ class STSR_net(nn.Module):
     def __init__(self):
         super(STSR_net, self).__init__()
 
-        self.flownet = PWCNet() # liteflownet() #PWCNet()
+        self.flownet = PWCNet() 
         self.refinenet = GridNet(20, 8)
         self.masknet = SmallMaskNet(38, 1)
         self.vsrnet = RSDN(4)
         self.synthnet = GridNet(20,3)
 
-    def forward(self,I0,I1,I2,I3):
+    def forward(self,I0,I1,I2,I3,t=0.5):
 
         device = I0.get_device()
 
@@ -120,20 +116,11 @@ class STSR_net(nn.Module):
 
         F10 = self.flownet(I1,I0)
         F12 = self.flownet(I1,I2)
-        #F13 = self.flownet(I1,I3)
 
         F23 = self.flownet(I2,I3)
         F21 = self.flownet(I2,I1)
-        #F20 = self.flownet(I2,I0)
 
-        #nb1 = [I0,I2,I3]
-        #flo1 = [F10,F12,F13]
-
-        #nb2 = [I3,I1,I0]
-        #flo2 = [F23,F21,F20]
-
-        #I1_h = self.vsrnet(I1,nb1,flo1)
-        #I2_h = self.vsrnet(I2,nb2,flo2)
+        
 
         B, C, H, W = I0.shape
 
@@ -152,10 +139,8 @@ class STSR_net(nn.Module):
 
         # interpolation
 
-        t = 0.5
-
-        F1t = qfe(F10,F12, t)      # cubic model can also be used!
-        F2t = qfe(F23,F21, t)
+        F1t = qfe(F10,F12, t)      
+        F2t = qfe(F23,F21, 1-t)
 
         # Flow Reversal
         Ft1, norm1 = fwarp(F1t, F1t)
@@ -207,14 +192,6 @@ if __name__ == "__main__":
     I1 = torch.randn(1,3,128,128).cuda(7)
     I2 = torch.randn(1,3,128,128).cuda(7)
     I3 = torch.randn(1,3,128,128).cuda(7)
-
-    fwarp = FlowReversal().cuda(7)
-
-
-    # I0 = torch.randn(1,3,64,64).cuda(2)
-    # I1 = torch.randn(1,3,64,64).cuda(2)
-    # I2 = torch.randn(1,3,64,64).cuda(2)
-    # I3 = torch.randn(1,3,64,64).cuda(2)
 
     out1, out2, out3, out4 = model(I0, I1, I2, I3)
 
