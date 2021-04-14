@@ -2,7 +2,7 @@
 
 _Saikat Dutta, Nisarg A. Shah, Anurag Mittal_
 
-Accepted at NTIRE workshop, collocated with CVPR 2021
+Accepted at NTIRE workshop, collocated with CVPR 2021 [ArXiv](https://arxiv.org/abs/2104.05778)
 
 ### Acknowledgement
 The following repositories were used to develop this project :
