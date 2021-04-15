@@ -31,6 +31,19 @@ Unzip the dataset under `REDS/` directory.
 python REDS_val.py
 ```
 
+### Citation
+If this project helps in your research, please cite our paper:
+```
+@misc{dutta2021efficient,
+      title={Efficient Space-time Video Super Resolution using Low-Resolution Flow and Mask Upsampling}, 
+      author={Saikat Dutta and Nisarg A. Shah and Anurag Mittal},
+      year={2021},
+      eprint={2104.05778},
+      archivePrefix={arXiv},
+      primaryClass={eess.IV}
+}
+```
+
 ### Acknowledgement
 The following repositories were used to develop this project :
 
