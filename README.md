@@ -17,6 +17,14 @@ conda install -c conda-forge opencv
 ### Dataset
 We use REDS STSR dataset for training and validation. Get the dataset by registering [here](https://competitions.codalab.org/competitions/28072#learn_the_details).
 Unzip the dataset under `REDS/` directory.
+```
+---REDS/
+  |---val/
+    |---val_sharp_bicubic/
+      |---X4/
+    |---val_sharp/
+    
+```
 
 ### Generate results on REDS STSR Validation dataset
 ```
