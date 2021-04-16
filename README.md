@@ -26,6 +26,9 @@ Unzip the dataset under `REDS/` directory.
     
 ```
 
+### Training
+Start your training by loading PWCNet (`checkpoints/pretrained/network-chairs-things.pytorch`) and RSDN (`checkpoints/pretrained/RSDN.pth`).
+
 ### Generate results on REDS STSR Validation dataset
 ```
 python REDS_val.py
