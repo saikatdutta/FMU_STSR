@@ -4,6 +4,9 @@ _Saikat Dutta, Nisarg A. Shah, Anurag Mittal_
 
 Accepted at NTIRE workshop, collocated with CVPR 2021 [ArXiv](https://arxiv.org/abs/2104.05778)
 
+![](demo.jpg)
+
+
 ### Requirements
 Create a conda environment with Pytorch-1.1, CuPy-6.0, OpenCV, SciPy.
 ```
