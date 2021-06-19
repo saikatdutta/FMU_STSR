@@ -2,7 +2,7 @@
 
 _Saikat Dutta, Nisarg A. Shah, Anurag Mittal_
 
-Accepted at NTIRE workshop, collocated with CVPR 2021 [ArXiv](https://arxiv.org/abs/2104.05778)
+Accepted at NTIRE workshop, collocated with CVPR 2021 [ArXiv](https://arxiv.org/abs/2104.05778) | [Paper](https://openaccess.thecvf.com/content/CVPR2021W/NTIRE/html/Dutta_Efficient_Space-Time_Video_Super_Resolution_Using_Low-Resolution_Flow_and_Mask_CVPRW_2021_paper.html) | [Poster](https://data.vision.ee.ethz.ch/cvl/ntire21/posters/NTIRE21_FMU_STSR.pdf) 
 
 ![](demo.jpg)
 
@@ -40,13 +40,12 @@ python REDS_val.py
 ### Citation
 If this project helps in your research, please cite our paper:
 ```
-@misc{dutta2021efficient,
-      title={Efficient Space-time Video Super Resolution using Low-Resolution Flow and Mask Upsampling}, 
-      author={Saikat Dutta and Nisarg A. Shah and Anurag Mittal},
-      year={2021},
-      eprint={2104.05778},
-      archivePrefix={arXiv},
-      primaryClass={eess.IV}
+@inproceedings{dutta2021efficient,
+  title={Efficient space-time video super resolution using low-resolution flow and mask upsampling},
+  author={Dutta, Saikat and Shah, Nisarg A and Mittal, Anurag},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={314--323},
+  year={2021}
 }
 ```
 
