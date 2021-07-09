@@ -2,7 +2,7 @@
 
 _Saikat Dutta, Nisarg A. Shah, Anurag Mittal_
 
-Accepted at NTIRE workshop, collocated with CVPR 2021 [ArXiv](https://arxiv.org/abs/2104.05778) | [Paper](https://openaccess.thecvf.com/content/CVPR2021W/NTIRE/html/Dutta_Efficient_Space-Time_Video_Super_Resolution_Using_Low-Resolution_Flow_and_Mask_CVPRW_2021_paper.html) | [Poster](https://data.vision.ee.ethz.ch/cvl/ntire21/posters/NTIRE21_FMU_STSR.pdf) 
+Accepted at NTIRE workshop, co-located with CVPR 2021 [ArXiv](https://arxiv.org/abs/2104.05778) | [Paper](https://openaccess.thecvf.com/content/CVPR2021W/NTIRE/html/Dutta_Efficient_Space-Time_Video_Super_Resolution_Using_Low-Resolution_Flow_and_Mask_CVPRW_2021_paper.html) | [Poster](https://data.vision.ee.ethz.ch/cvl/ntire21/posters/NTIRE21_FMU_STSR.pdf) 
 
 ![](demo.jpg)
 
