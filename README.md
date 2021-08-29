@@ -16,6 +16,10 @@ conda install pytorch==1.1.0 torchvision==0.3.0 cudatoolkit=10.0 -c pytorch
 conda install -c anaconda cupy
 conda install -c anaconda scipy
 conda install -c conda-forge opencv
+conda install -c anaconda scikit-image
+conda install -c anaconda pandas
+conda install -c anaconda tqdm
+
 ```
 ### Dataset
 We use REDS STSR dataset for training and validation. Get the dataset by registering [here](https://competitions.codalab.org/competitions/28072#learn_the_details).
